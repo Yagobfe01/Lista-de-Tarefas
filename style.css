@@ -60,24 +60,53 @@ body .checks{
 
 .checks ul{
     list-style: none;
-    padding: 0;
+    padding: 0 15px ;
     margin: 0;
     margin-top: 20px;
     text-align: left;
-    padding-left: 40px;
 }
 
 .checks .lista li {
     display: flex;
     align-items: center;
-    gap: 10px; /* Espaçamento entre checkbox e texto */
+    gap: 10px;
     padding: 5px 0;
     font-size: 20px;
+    justify-content: space-between;
+    margin: 5px 0;
+    border-bottom: 1px solid #ddd;
 }
 
 .checkbox-tarefa {
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
     cursor: pointer;
     background-color: aquamarine;
+    color: #84b3c4;
+}
+
+input[type="checkbox"]:checked + label:after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 2px;
+    width: 6px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 4px 4px 0;
+    transform: rotate(45deg);
+  }
+/* Estilo para o texto riscado */
+.riscado {
+    text-decoration: line-through; /* Riscando o texto */
+    color: rgb(255, 255, 255); /* Opcional: para deixar o texto com cor mais clara */
+}
+
+/* Estilo para a lixeira */
+.lixeira {
+    width: 20px; /* Ajuste o tamanho da lixeira */
+    height: 20px;
+    margin-left: 10px; /* Espaço entre o texto e a lixeira */
+    cursor: pointer; /* Aponta que a lixeira é clicável */
+    vertical-align: middle; /* Alinha verticalmente */
 }
